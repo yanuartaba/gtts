@@ -84,9 +84,9 @@ app.post('/speech', function (req, res) {
   if (text !== '') {
     const countWord = text.split(' ');
 
-    if (countWord.length > 500) {
-      return res.status(500).json({
-        message: 'Senteces has more than 500 word',
+    if (countWord.length > 100) {
+      return res.status(100).json({
+        message: 'Senteces has more than 100 word',
       });
     }
   }
