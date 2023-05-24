@@ -72,15 +72,6 @@ app.post('/speech', function (req, res) {
   let fileName = `${Date.now()}-${language}-output.mp3`;
   let filepath = path.join(__dirname + '/public/', fileName);
 
-  // const regex = /[/\\@#$%^&*()"':{}|<>\-;_]/g.test(text);
-
-  // if (regex) {
-  //   return res.status(400).json({
-  //     message:
-  //       'Check senteces, it should be no [!@#$/%^&*()":{}|<>] in sentences',
-  //   });
-  // }
-
   if (text !== '') {
     const countWord = text.split(' ');
 
